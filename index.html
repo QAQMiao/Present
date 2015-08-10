@@ -28,12 +28,19 @@
       <p class="tagline">the present for my best girlfriend</p>
       <div id="main" style ="height:1000px" role="main">
         <article class="markdown-body">
-          <script>
-		  document.write("Hi my darling~This is 22:56 2015.8.9");
-		  document.write("I'm preparing this present for your birthday now and I broke up with Mike right now");
-		  document.write("I feel so sorry to say these on your birthday present...so maybe I need do this tomorrow")
-		  document.write("Okey.Good night,my darling");
-		  
+          <div id = "happy" style = "font-size:50px">Happy Birthday My Dear~</div>
+		  <script>	
+			function changeColor()
+			{
+				var nowColor = '#' + Math.ceil(Math.random()*16777215).toString(16);
+				while(nowColor.length < 6)
+				{
+					nowColor = '0' + nowColor;
+				}
+				//document.write(nowColor);
+				document.getElementById("happy").style.color = nowColor;
+			}
+			setInterval("changeColor()",500);
 		  </script>
         </article>
       </div>
