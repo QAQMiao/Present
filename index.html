@@ -32,7 +32,7 @@
 		  <script>	
 			function changeColor()
 			{
-				var nowColor = '#' + Math.ceil(Math.random()*16777215).toString(16);
+				var nowColor = '#' + Math.ceil(Math.random()*0xffffff).toString(16);
 				while(nowColor.length < 6)
 				{
 					nowColor = '0' + nowColor;
