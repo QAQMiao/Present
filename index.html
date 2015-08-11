@@ -30,17 +30,17 @@
         <article class="markdown-body">
           <div id = "happy" style = "font-size:50px">Happy Birthday My Dear~</div>
 		  <script>	
-			function changeColor()
+			function changeColor(text)
 			{
-				var nowColor = '#' + Math.ceil(Math.random()*0xffffff).toString(16);
+				var nowColor ='#' + Math.ceil(Math.random()*0xffffff).toString(16);
 				while(nowColor.length < 6)
 				{
 					nowColor = '0' + nowColor;
 				}
 				//document.write(nowColor);
-				document.getElementById("happy").style.color = nowColor;
+				document.getElementById(text).style.color = nowColor;
 			}
-			setInterval("changeColor()",500);
+			setInterval("changeColor(\"happy\")",500);
 		  </script>
         </article>
       </div>
