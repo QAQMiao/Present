@@ -43,19 +43,23 @@
               }
               document.getElementById(text).style.color = nowColor;
             }
+            var cha = setInterval("changeColor(\"bt1\")",500);
             function co()
             {
-              setInterval("changeColor(\"bt1\")",500);
+              cha = setInterval("changeColor(\"bt1\")",500);
+            }
+            function st()
+            {
+              clearInterval(cha);
             }
           </script>
           <br/>
-          <button id = "bt1" onmouseout = "co(this)" type="button" style="width:300px;height:200px;background-color:lightgrey;margin-left:auto;margin-right:auto;display:block;margin-bottom:0%"><u>Start</u></button> 
+          <button id = "bt1" onmouseout = "co()" onmousemove = "st()"type="button" style="width:300px;height:200px;background-color:lightgrey;margin-left:auto;margin-right:auto;display:block;margin-bottom:0%"><u>Start</u></button> 
           <script>
           document.getElementById("bt1").style.color = "purple";
           document.getElementById("bt1").style.fontFamily="Times New Roman";
           document.getElementById("bt1").style.fontSize="70px";
-      		
-      		setInterval("changeColor(\"happy\")",1500);
+      		setInterval("changeColor(\"happy\")",2000);
       	  </script>
         </article>
       </div>
