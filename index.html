@@ -29,35 +29,34 @@
       <div id="main" style ="height:250px" role="main">
         <article class="markdown-body">
           <!-- <div id = "happy" style = "font-size:50px">Happy Birthday My Dear~</div> -->
-		  <audio autoplay = "autoplay" loop = "loop">
-        <source src="何炅 - 栀子花开 - 古筝版纯音乐1.mp3" type="audio/mpeg">
-          <source src="song.mp3" type="audio/mpeg">
-      </audio>
-      <br/>
-      <button id = "bt1" type="button" style="width:300px;height:200px;background-color:lightgrey;margin-left:auto;margin-right:auto;display:block;margin-bottom:0%"><u>Start</u></button> 
-      <script>
-      document.getElementById("bt1").style.color = "purple";
-      document.getElementById("bt1").style.fontFamily="Times New Roman";
-      document.getElementById("bt1").style.fontSize="70px";
-			function changeColor(text)
-			{
-				var nowColor ='#' + Math.ceil(Math.random()*0xffffff).toString(16);
-				while(nowColor.length < 6)
-				{
-					nowColor = '0' + nowColor;
-				}
-				//document.write(nowColor);
-				document.getElementById(text).style.color = nowColor;
-			}
-			setInterval("changeColor(\"happy\")",1500);
-      //setInterval("changeColor(\"bt1\")",500);
-		  </script>
-      <style type="text/css">
-        button:link {color: #FF0000}
-        button:visited {color: #00FF00}
-        button:hover {color: #FF00FF}
-        button:active {color: #0000FF}
-        </style>
+      	  <audio autoplay = "autoplay" loop = "loop">
+            <source src="何炅 - 栀子花开 - 古筝版纯音乐1.mp3" type="audio/mpeg">
+              <source src="song.mp3" type="audio/mpeg">
+          </audio>
+          <script>
+            function changeColor(text)
+            {
+              var nowColor ='#' + Math.ceil(Math.random()*0xffffff).toString(16);
+              while(nowColor.length < 6)
+              {
+                nowColor = '0' + nowColor;
+              }
+              document.getElementById(text).style.color = nowColor;
+            }
+            function co()
+            {
+              setInterval("changeColor(\"bt1\")",500);
+            }
+          </script>
+          <br/>
+          <button id = "bt1" onmouseout = "co(this)" type="button" style="width:300px;height:200px;background-color:lightgrey;margin-left:auto;margin-right:auto;display:block;margin-bottom:0%"><u>Start</u></button> 
+          <script>
+          document.getElementById("bt1").style.color = "purple";
+          document.getElementById("bt1").style.fontFamily="Times New Roman";
+          document.getElementById("bt1").style.fontSize="70px";
+      		
+      		setInterval("changeColor(\"happy\")",1500);
+      	  </script>
         </article>
       </div>
     </div>
