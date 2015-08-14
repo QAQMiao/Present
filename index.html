@@ -18,7 +18,7 @@
 
 <body>
   <script>
-	alert("       温馨提示： \n      打开音量袄︿(￣︶￣)︿");
+  alert("       温馨提示： \n      打开音量袄︿(￣︶￣)︿");
   </script>
   <div class="wrapper">
     <header>
@@ -29,7 +29,7 @@
       <div id="main" style ="height:250px" role="main">
         <article class="markdown-body">
           <!-- <div id = "happy" style = "font-size:50px">Happy Birthday My Dear~</div> -->
-      	  <audio autoplay = "autoplay" loop = "loop">
+          <audio autoplay = "autoplay" loop = "loop">
             <source src="何炅 - 栀子花开 - 古筝版纯音乐1.mp3" type="audio/mpeg">
               <source src="song.mp3" type="audio/mpeg">
           </audio>
@@ -54,13 +54,13 @@
             }
           </script>
           <br/>
-          <button id = "bt1" onmouseout = "co()" onmousemove = "st()"type="button" style="width:300px;height:200px;background-color:lightgrey;margin-left:auto;margin-right:auto;display:block;margin-bottom:0%"><u>Start</u></button> 
+          <button type="button" style="width:300px;height:200px;background-color:lightgrey;margin-left:auto;margin-right:auto;display:block;margin-bottom:0%"><a id = "bt1" onmouseout = "co()" onmousemove = "st()" title = "点我点我！" href = "http://blog.csdn.net/miaoaoaoao"><u>Start</u></a></button>
           <script>
           document.getElementById("bt1").style.color = "purple";
           document.getElementById("bt1").style.fontFamily="Times New Roman";
-          document.getElementById("bt1").style.fontSize="70px";
-      		setInterval("changeColor(\"happy\")",2000);
-      	  </script>
+          document.getElementById("bt1").style.fontSize="80px";
+          setInterval("changeColor(\"happy\")",2000);
+          </script>
         </article>
       </div>
     </div>
@@ -81,6 +81,6 @@
     <p class="name"></p>
   </div>
 
-  
+
 </body>
 </html>
