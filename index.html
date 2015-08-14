@@ -29,46 +29,63 @@
       <div id="main" style ="height:250px" role="main">
         <article class="markdown-body">
           <!-- <div id = "happy" style = "font-size:50px">Happy Birthday My Dear~</div> -->
-      	  <audio autoplay = "autoplay" loop = "loop">
-            <source src="何炅 - 栀子花开 - 古筝版纯音乐1.mp3" type="audio/mpeg">
-              <source src="song.mp3" type="audio/mpeg">
-          </audio>
-          <script>
-            function changeColor(text)
-            {
-              var nowColor ='#' + Math.ceil(Math.random()*0xffffff).toString(16);
-              while(nowColor.length < 6)
-              {
-                nowColor = '0' + nowColor;
-              }
-              document.getElementById(text).style.color = nowColor;
-            }
-            var cha = setInterval("changeColor(\"bt1\")",500);
-            function co()
-            {
-              cha = setInterval("changeColor(\"bt1\")",500);
-            }
-            function st()
-            {
-              clearInterval(cha);
-            }
-          </script>
-          <br/>
-          <button id = "bt1" onmouseout = "co()" onmousemove = "st()"type="button" style="width:300px;height:200px;background-color:lightgrey;margin-left:auto;margin-right:auto;display:block;margin-bottom:0%"><u>Start</u></button> 
-          <script>
-          document.getElementById("bt1").style.color = "purple";
-          document.getElementById("bt1").style.fontFamily="Times New Roman";
-          document.getElementById("bt1").style.fontSize="70px";
-      		setInterval("changeColor(\"happy\")",2000);
-      	  </script>
-        </article>
+		  <audio autoplay = "autoplay" loop = "loop">
+        <source src="何炅 - 栀子花开 - 古筝版纯音乐1.mp3" type="audio/mpeg">
+          <source src="song.mp3" type="audio/mpeg">
+      </audio>
+      <br/>
+      <style type="text/css">
+        button:link {color: #FF0000}
+        button:visited {color: #00FF00}
+        button:hover {color: #FF00FF}
+        button:active {color: #0000FF}
+
+        #bt1{
+		width:300px;
+		height:200px;
+		background-color:lightgrey;
+		margin-left:auto;
+		margin-right:auto;
+		display:block;
+		margin-bottom:0;
+		color:purple;
+		font-family:"Times New Roman";
+		font-size:70px;
+        }
+      </style>
+      <script>
+      //应该写到css中。document.getElementById("bt1").style.color = "purple";
+      //document.getElementById("bt1").style.fontFamily="Times New Roman";
+      //document.getElementById("bt1").style.fontSize="70px";
+      var timerId;
+			function changeColor(text)
+			{
+				var nowColor ='#' + Math.ceil(Math.random()*0xffffff).toString(16);
+				while(nowColor.length < 6)
+				{
+					nowColor = '0' + nowColor;
+				}
+				//document.write(nowColor);
+				document.getElementById(text).style.color = nowColor;
+			}
+	timerId = setInterval("changeColor(\"bt1\")",1500);
+      //setInterval("changeColor(\"bt1\")",500);
+      </script>
+      <button id = "bt1" type="button" onmouseover="clearInterval(timerId)" onmouseout="timerId=setInterval(changeColor('bt1'),500);">
+                <u>Start</u>
+      </button>
+
+      </article>
       </div>
     </div>
     <footer>
       <div class="owner">
-      <p><a href="https://github.com/QAQMiao" class="avatar"><img src="https://avatars0.githubusercontent.com/u/8213657?v=3&amp;s=60" width="48" height="48"></a> <a href="https://github.com/QAQMiao">QAQMiao</a> maintains <a href="https://github.com/QAQMiao/Present">Happy Birthday</a></p>
-
-
+      <p>
+	<a href="https://github.com/QAQMiao" class="avatar">
+	<img src="https://avatars0.githubusercontent.com/u/8213657?v=3&amp;s=60" width="48" height="48">
+	</a> 
+	<a href="https://github.com/QAQMiao">QAQMiao</a> maintains 
+	<a href="https://github.com/QAQMiao/Present">Happy Birthday</a></p>
       </div>
       <div class="creds">
         <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
