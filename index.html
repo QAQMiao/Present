@@ -41,6 +41,7 @@
               {
                 nowColor = '0' + nowColor;
               }
+              nowColor = 'rgba(' + nowColor + ')';
               document.getElementById(text).style.color = nowColor;
             }
             var cha = setInterval("changeColor(\"bt1\")",500);
@@ -55,6 +56,9 @@
           </script>
           <br/>
           <button type="button" style="width:300px;height:200px;background-color:lightgrey;margin-left:auto;margin-right:auto;display:block;margin-bottom:0%"><a id = "bt1" onmouseout = "co()" onmousemove = "st()" title = "点我点我！" href = "http://blog.csdn.net/miaoaoaoao"><u>Start</u></a></button>
+          <bdo dir="rtl">
+            I don't know anything to add , so there is a interesting div.
+          </bdo>
           <script>
           document.getElementById("bt1").style.color = "purple";
           document.getElementById("bt1").style.fontFamily="Times New Roman";
